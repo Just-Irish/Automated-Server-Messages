@@ -42,5 +42,5 @@ to be aware of an issue that you are aware of and are intending to fix. It's ent
   * This will remove the fourth message you created if you happen to have 4 automated messages made. If you have 5, the fifth automated message will now become the fourth since you just deleted
   the other one.
 
-* After creating 4 different messages and then using the command "/automsg list" you can see that it gives each message a number based on when it was created, not when the message is supposed to trigger.
+* After creating 4 different messages and then using the command "/automsg list" you can see in the image below that it gives each message a number based on when it was created, not when the message is supposed to trigger.
 <img width="486" height="248" alt="Image" src="https://github.com/user-attachments/assets/5ddc24ac-dfa3-4d50-bb7b-edd118d2d55b" />
