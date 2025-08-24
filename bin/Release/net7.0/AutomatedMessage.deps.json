@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "AutomatedMessage/1.0.0": {
+        "dependencies": {
+          "VintagestoryAPI": "1.0.0.0"
+        },
+        "runtime": {
+          "AutomatedMessage.dll": {}
+        }
+      },
+      "VintagestoryAPI/1.0.0.0": {
+        "runtime": {
+          "VintagestoryAPI.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.20.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AutomatedMessage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VintagestoryAPI/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

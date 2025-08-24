@@ -1,0 +1,17 @@
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net7.0/AutomatedMessage.deps.json
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net7.0/AutomatedMessage.dll
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net7.0/AutomatedMessage.pdb
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net7.0/VintagestoryAPI.dll
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net7.0/VintagestoryAPI.pdb
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net7.0/VintagestoryAPI.xml
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/AutomatedMessage.csproj.AssemblyReference.cache
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/AutomatedMessage.GeneratedMSBuildEditorConfig.editorconfig
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/AutomatedMessage.AssemblyInfoInputs.cache
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/AutomatedMessage.AssemblyInfo.cs
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/AutomatedMessage.csproj.CoreCompileInputs.cache
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/AutomatedMessage.sourcelink.json
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/Automate.191500DA.Up2Date
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/AutomatedMessage.dll
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/refint/AutomatedMessage.dll
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/AutomatedMessage.pdb
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net7.0/ref/AutomatedMessage.dll

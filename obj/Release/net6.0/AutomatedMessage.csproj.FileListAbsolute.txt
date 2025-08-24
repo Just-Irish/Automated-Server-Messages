@@ -1,0 +1,6 @@
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net6.0/AutomatedMessage.csproj.AssemblyReference.cache
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net6.0/AutomatedMessage.GeneratedMSBuildEditorConfig.editorconfig
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net6.0/AutomatedMessage.AssemblyInfoInputs.cache
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net6.0/AutomatedMessage.AssemblyInfo.cs
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net6.0/AutomatedMessage.csproj.CoreCompileInputs.cache
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net6.0/AutomatedMessage.sourcelink.json

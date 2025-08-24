@@ -74,7 +74,7 @@ namespace AutomatedMessageMod
             string mode = args.PopWord();
             if (mode == null)
             {
-                player.SendMessage(groupId, "Usage: /automsg add <HH:mm[,HH:mm...]> <message> | /automsg list | /automsg remove <index> [HH:mm] | /automsg clear", EnumChatType.CommandError);
+                player.SendMessage(groupId, "Usage: /automsg add [HH:mm[,HH:mm...]] [message] | /automsg list | /automsg remove [index] [HH:mm] | /automsg clear", EnumChatType.CommandError);
                 return;
             }
 
@@ -85,7 +85,7 @@ namespace AutomatedMessageMod
 
                 if (string.IsNullOrWhiteSpace(timesRaw) || string.IsNullOrWhiteSpace(msg))
                 {
-                    player.SendMessage(groupId, "Usage: /automsg add <HH:mm[,HH:mm...]> <message>", EnumChatType.CommandError);
+                    player.SendMessage(groupId, "Usage: /automsg add [HH:mm[,HH:mm...]] [message]", EnumChatType.CommandError);
                     return;
                 }
 
