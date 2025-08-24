@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "automatedmessage",
+  "name": "Automated Message",
+  "description": "Sends automated chat messages at specified times. Supports add/remove/list/clear commands and persistence.",
+  "authors": ["Just_Irish"],
+  "version": "1.0.0",
+  "dependencies": {
+    "game": "1.20.0"
+  }
+}
