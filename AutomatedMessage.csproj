@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>AutomatedMessage</AssemblyName>
+    <RootNamespace>AutomatedMessageMod</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Reference to the Vintage Story API -->
+    <Reference Include="VintagestoryAPI">
+      <HintPath>/home/irish/.local/share/flatpak/app/at.vintagestory.VintageStory/x86_64/stable/0861de5b52b1b76c01d9a2ca434cfd5aded4f13dfebf1839345cbe7bf873635c/files/extra/vintagestory/VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VintagestoryServer">
+      <HintPath>/home/irish/.local/share/flatpak/app/at.vintagestory.VintageStory/x86_64/stable/0861de5b52b1b76c01d9a2ca434cfd5aded4f13dfebf1839345cbe7bf873635c/files/extra/vintagestory/VintagestoryServer.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

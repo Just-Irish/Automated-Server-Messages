@@ -1,0 +1,15 @@
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net8.0/AutomatedMessage.deps.json
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net8.0/AutomatedMessage.dll
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net8.0/AutomatedMessage.pdb
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.GeneratedMSBuildEditorConfig.editorconfig
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.AssemblyInfoInputs.cache
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.AssemblyInfo.cs
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.csproj.CoreCompileInputs.cache
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.sourcelink.json
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.dll
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/refint/AutomatedMessage.dll
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.pdb
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/ref/AutomatedMessage.dll
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.csproj.AssemblyReference.cache
+/home/irish/Documents/VS-Server-Timed-Message/bin/Release/net8.0/AutomatedMessage.runtimeconfig.json
+/home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.genruntimeconfig.cache

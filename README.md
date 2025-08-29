@@ -1,6 +1,6 @@
 # Automated Server Messages
 
-**Note:** *This mod was created almost exclusivly with the help of ChatGPT. I have negligable knowledge in coding and could not have made this mod without it.*
+**Note:** *This mod was created almost exclusivly with the help of ChatGPT and Claude Sonnet 4. I have negligable knowledge in coding and could not have made this mod without these LLMs.*
 
 ## What Does This Mod Do?
 
@@ -16,26 +16,23 @@ to be aware of an issue that you are aware of and are intending to fix. It's ent
 **Do Keep In mind** this mod uses the time of the hosts machine. So if you are renting a server you will need to figure out its time zone and base your messages off of that.
 
 ## Commands
-* /automsgtest
-* /automsg add [HH:mm] [Type your message here!]
+~~* /automsgtest~~
+* /automsg add [HH:mm] [Type your message here with up to 27 words!]
 * /automsg remove [index]
-* /automsg clear
+~~* /automsg clear~~
 * /automsg list
 
 #### Explaining the Commands
-1. The command '**/automsgtest**' is merely a test broadcast. Typing this in will let you know if the mod is working or not. If it is working, you should see "Test" appear in the chat window.
-   Also, I understand this command is the odd one compared to the rest, but this is correct.
-2. "**add**" quite obviously will add a message, but you need the rest of the command for it to do so.
-3. **[HH:mm]** references the time you want the message to trigger in a 24 hour format. So if you want your message to trigger at 3 in the afternoon (based on the host machines timezone),
-   then you would type [15:00] (excluding the brackets). You can also have a message trigger multiple times from a single command (e.g. [15:00,15:30]).
-4. **[Type your message here]**. Pretty self explanatory (exclude the brackets again).
-5. "**remove**" specifically deletes a single automated message. You need the rest of the command for it to work.
-6. **[index]** references the message you wish to delete in the order that it was made.
-7. "**clear**" will delete every single automated message you have created. I'm pretty sure this is the equivalent to pouring bleach into your eyes.
-8. "**list**" will show every single message you have created in the order that they were created.
+1. "**add**" quite obviously will add a message, but you need the rest of the command for it to do so.
+2. **[HH:mm]** references the time you want the message to trigger in a 24 hour format. So if you want your message to trigger at 3 in the afternoon (based on the host machines timezone),
+   then you would type [15:00] (excluding the brackets).
+3. **[Type your message here with up to 27 words!]**. Pretty self explanatory (exclude the brackets again).
+4. "**remove**" specifically deletes a single automated message. You need the rest of the command for it to work.
+5. **[index]** references the message you wish to delete in the order that it was made.
+6. "**list**" will show every single message you have created in the order that they were created.
 
 #### Examples of the Commands Being Used
-* /automsg add 05:00,12:00,17:00 Server restart in 30 minutes.
+* /automsg add 05:00 Server restart in 30 minutes.
   * A message will appear in chat stating that there will be a server restart in 30 minutes at 5:00 am, 12:00 pm, and 5:00 pm.
 
 * /automsg remove 4

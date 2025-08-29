@@ -2,11 +2,11 @@
   "type": "code",
   "modid": "automatedmessage",
   "name": "Automated Server Messages",
-  "description": "Sends automated chat messages at specified times. Supports add/remove/list/clear commands and persistence.",
   "authors": ["Just_Irish"],
-  "version": "1.0.2",
+  "description": "Automatically sends scheduled server messages at specified times.",
   "side": "Server",
+  "version": "1.1.0",
   "dependencies": {
-    "game": "1.20.0"
+    "game": "1.21.0"
   }
 }
