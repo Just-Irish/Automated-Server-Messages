@@ -13,3 +13,18 @@
 /home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.csproj.AssemblyReference.cache
 /home/irish/Documents/VS-Server-Timed-Message/bin/Release/net8.0/AutomatedMessage.runtimeconfig.json
 /home/irish/Documents/VS-Server-Timed-Message/obj/Release/net8.0/AutomatedMessage.genruntimeconfig.cache
+/home/irish/Github Projects/Automated-Server-Messages/bin/Release/net8.0/AutomatedMessage.deps.json
+/home/irish/Github Projects/Automated-Server-Messages/bin/Release/net8.0/AutomatedMessage.runtimeconfig.json
+/home/irish/Github Projects/Automated-Server-Messages/bin/Release/net8.0/AutomatedMessage.dll
+/home/irish/Github Projects/Automated-Server-Messages/bin/Release/net8.0/AutomatedMessage.pdb
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/AutomatedMessage.csproj.AssemblyReference.cache
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/AutomatedMessage.GeneratedMSBuildEditorConfig.editorconfig
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/AutomatedMessage.AssemblyInfoInputs.cache
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/AutomatedMessage.AssemblyInfo.cs
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/AutomatedMessage.csproj.CoreCompileInputs.cache
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/AutomatedMessage.sourcelink.json
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/AutomatedMessage.dll
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/refint/AutomatedMessage.dll
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/AutomatedMessage.pdb
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/AutomatedMessage.genruntimeconfig.cache
+/home/irish/Github Projects/Automated-Server-Messages/obj/Release/net8.0/ref/AutomatedMessage.dll

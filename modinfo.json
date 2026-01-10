@@ -4,8 +4,7 @@
   "name": "Automated Server Messages",
   "authors": ["Just_Irish"],
   "description": "Automatically sends scheduled server messages at specified times.",
-  "side": "Server",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "dependencies": {
     "game": "1.21.0"
   }

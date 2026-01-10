@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9ibJnnyA7hQ=",
+  "dgSpecHash": "56bzKOBQ4us=",
   "success": true,
-  "projectFilePath": "/home/irish/Documents/VS-Server-Timed-Message/AutomatedMessage.csproj",
+  "projectFilePath": "/home/irish/Github Projects/Automated-Server-Messages/AutomatedMessage.csproj",
   "expectedPackageFiles": [
-    "/home/irish/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
-    "/home/irish/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
+    "/home/irish/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/irish/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
   ],
   "logs": []
 }

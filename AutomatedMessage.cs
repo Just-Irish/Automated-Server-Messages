@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Timers;
 using System.Linq;
+using System.IO;
+using System.Text.Json;
 using Vintagestory.API.Server;
 using Vintagestory.API.Common;
 
@@ -12,13 +14,24 @@ namespace AutomatedMessageMod
         private ICoreServerAPI? sapi;
         private System.Timers.Timer? checkTimer;
         private readonly List<ServerTimedMessage> messages = new List<ServerTimedMessage>();
+        private string configFilePath = "";
 
         public override void StartServerSide(ICoreServerAPI api)
         {
             sapi = api;
+            
+            // Log immediately
+            api.Logger.Notification("=== AutomatedMessage Mod Starting ===");
+
+            // Set up config file path
+            configFilePath = Path.Combine(api.GetOrCreateDataPath("ModConfig"), "AutomatedMessages.json");
+            
+            api.Logger.Notification($"Config file path will be: {configFilePath}");
+
+            // Load saved messages from disk
+            LoadMessages();
 
             // Register the command with enough optional word parsers for long messages
-            // This allows up to 30 words total (subcommand + time + 28 message words)
             api.ChatCommands.Create("automsg")
                 .WithDescription("Manage automated messages")
                 .WithArgs(
@@ -56,10 +69,108 @@ namespace AutomatedMessageMod
                 .RequiresPrivilege(Privilege.controlserver)
                 .HandleWith(OnAutoMsgCommand);
 
+            api.Logger.Notification("Command registered successfully");
+
             // Start the timer for scheduled messages
             checkTimer = new System.Timers.Timer(1000); // check every second
             checkTimer.Elapsed += (sender, e) => CheckSchedule();
             checkTimer.Start();
+            
+            api.Logger.Notification("=== AutomatedMessage Mod Started Successfully ===");
+        }
+
+        private void LoadMessages()
+        {
+            try
+            {
+                sapi?.Logger.Notification($"[LoadMessages] Attempting to load from: {configFilePath}");
+                
+                if (File.Exists(configFilePath))
+                {
+                    string json = File.ReadAllText(configFilePath);
+                    sapi?.Logger.Notification($"[LoadMessages] File found, contents length: {json.Length}");
+                    
+                    var savedMessages = JsonSerializer.Deserialize<List<SavedMessage>>(json);
+
+                    if (savedMessages != null)
+                    {
+                        messages.Clear();
+                        foreach (var saved in savedMessages)
+                        {
+                            if (TimeSpan.TryParse(saved.Time, out var timeSpan))
+                            {
+                                messages.Add(new ServerTimedMessage(timeSpan, saved.Message));
+                            }
+                            else
+                            {
+                                sapi?.Logger.Warning($"[LoadMessages] Failed to parse time: {saved.Time}");
+                            }
+                        }
+                        sapi?.Logger.Notification($"[LoadMessages] Successfully loaded {messages.Count} messages");
+                    }
+                }
+                else
+                {
+                    sapi?.Logger.Notification($"[LoadMessages] No saved file found at {configFilePath}");
+                }
+            }
+            catch (Exception ex)
+            {
+                sapi?.Logger.Error($"[LoadMessages] EXCEPTION: {ex.Message}");
+                sapi?.Logger.Error($"[LoadMessages] Stack: {ex.StackTrace}");
+            }
+        }
+
+        private void SaveMessages()
+        {
+            try
+            {
+                sapi?.Logger.Notification($"[SaveMessages] Attempting to save {messages.Count} messages to: {configFilePath}");
+                
+                var savedMessages = messages.Select(m => new SavedMessage
+                {
+                    Time = m.Time.ToString(@"hh\:mm"),
+                    Message = m.Message
+                }).ToList();
+
+                var options = new JsonSerializerOptions { WriteIndented = true };
+                string json = JsonSerializer.Serialize(savedMessages, options);
+                
+                sapi?.Logger.Notification($"[SaveMessages] Serialized JSON length: {json.Length}");
+
+                // Ensure directory exists
+                string? directory = Path.GetDirectoryName(configFilePath);
+                
+                if (!string.IsNullOrEmpty(directory))
+                {
+                    sapi?.Logger.Notification($"[SaveMessages] Directory: {directory}");
+                    
+                    if (!Directory.Exists(directory))
+                    {
+                        Directory.CreateDirectory(directory);
+                        sapi?.Logger.Notification($"[SaveMessages] Created directory");
+                    }
+                }
+
+                File.WriteAllText(configFilePath, json);
+                sapi?.Logger.Notification($"[SaveMessages] File written successfully");
+                
+                // Verify
+                if (File.Exists(configFilePath))
+                {
+                    var fileInfo = new FileInfo(configFilePath);
+                    sapi?.Logger.Notification($"[SaveMessages] VERIFIED: File exists, size: {fileInfo.Length} bytes");
+                }
+                else
+                {
+                    sapi?.Logger.Error($"[SaveMessages] ERROR: File does not exist after write!");
+                }
+            }
+            catch (Exception ex)
+            {
+                sapi?.Logger.Error($"[SaveMessages] EXCEPTION: {ex.Message}");
+                sapi?.Logger.Error($"[SaveMessages] Stack: {ex.StackTrace}");
+            }
         }
 
         private TextCommandResult OnAutoMsgCommand(TextCommandCallingArgs args)
@@ -98,6 +209,7 @@ namespace AutomatedMessageMod
                         if (TimeSpan.TryParse(time, out var scheduleTime))
                         {
                             messages.Add(new ServerTimedMessage(scheduleTime, message));
+                            SaveMessages(); // Save to disk
                             return TextCommandResult.Success($"Added scheduled message at {time}: {message}");
                         }
                         else
@@ -134,6 +246,7 @@ namespace AutomatedMessageMod
                         {
                             var removed = messages[index - 1];
                             messages.RemoveAt(index - 1);
+                            SaveMessages(); // Save to disk
                             return TextCommandResult.Success($"Removed message at {removed.Time:hh\\:mm}: {removed.Message}");
                         }
                         else
@@ -181,6 +294,13 @@ namespace AutomatedMessageMod
             checkTimer?.Stop();
             checkTimer?.Dispose();
             base.Dispose();
+        }
+
+        // Helper class for JSON serialization - stores time as string to avoid TimeSpan serialization issues
+        private class SavedMessage
+        {
+            public string Time { get; set; } = "";
+            public string Message { get; set; } = "";
         }
 
         private class ServerTimedMessage
