@@ -32,7 +32,7 @@ namespace AutomatedMessageMod
             LoadMessages();
 
             // Register the command with enough optional word parsers for long messages
-            api.ChatCommands.Create("automsg")
+            api.ChatCommands.Create("servermsg")
                 .WithDescription("Manage automated messages")
                 .WithArgs(
                     api.ChatCommands.Parsers.Word("subcommand"),
