@@ -4,7 +4,10 @@
     - Changing Font Size of Messages (if it is possible)
     - GUI (if I have the time and capabilities)
 
-#### Version 1.1.0 -- 1.2.1
+#### Version 1.2.1 --> 1.2.2
+    - Changed `/automsg` command to `/servermsg` instead. There appears to be an odd legacy piece of code I can't find that interferes with `/automsg` and potentially causing the server messages to not appear or save after restarts.
+
+#### Version 1.1.0 --> 1.2.1
     - Fixed messages not remaining persistent after server restart/reboot
 
 #### Version 1.0.2 --> 1.1.0

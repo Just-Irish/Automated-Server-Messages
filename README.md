@@ -12,7 +12,12 @@ Of course, this can be used for other things as well. Perhaps you run a public s
 **Do Keep In mind** this mod uses the time of the hosts machine. So if you are renting a server you will need to figure out its time zone and base your messages off of that.
 **ALSO**, this is strictly a mod for server-wide messages. Nothing more. It will not create automated tasks for the server. You need to do that manually or use your hosts provided cpanel.
 
-## Commands
+## Commands (Version 1.2.2+)
+* `/servermsg add [HH:mm] [Type your message here with up to 27 words!]`
+* `/servermsg remove [index]`
+* `/servermsg list`
+
+### Legacy Commands, (Version 1.2.1)
 * `/automsg add [HH:mm] [Type your message here with up to 27 words!]`
 * `/automsg remove [index]`
 * `/automsg list`
@@ -26,11 +31,11 @@ Of course, this can be used for other things as well. Perhaps you run a public s
 6. `list` will show every single message you have created in the order that they were created.
 
 #### Examples of the Commands Being Used
-* `/automsg add 05:00 12:00 17:00 Server restart in 30 minutes.`
-  * A message will appear in chat stating that there will be a server restart in 30 minutes at 5:00 am, 12:00 pm, and 5:00 pm.
+* `/servermsg add 05:00 Server restart in 30 minutes.`
+  * A message will appear in chat stating that there will be a server restart in 30 minutes at 5:00 am.
 
-* `/automsg remove 4`
-  * This will remove the fourth message you created if you happen to have 4 automated messages made. If you have 5, the fifth automated message will now become the fourth since you just deleted the previous entry. Check with `/automsg list`
+* `/servermsg remove 4`
+  * This will remove the fourth message you created if you happen to have 4 automated messages made. If you have 5, the fifth automated message will now become the fourth since you just deleted the previous entry. Check with `/servermsg list`
 
-* After creating 4 different messages and then using the command `/automsg list` you can see in the image below that it gives each message a number based on when it was created, not when the message is supposed to trigger.
+* After creating 4 different messages and then using the command `/servermsg list` you can see in the image below that it gives each message a number based on when it was created, not when the message is supposed to trigger.
 <img width="486" height="248" alt="Image" src="https://github.com/user-attachments/assets/5ddc24ac-dfa3-4d50-bb7b-edd118d2d55b" />
