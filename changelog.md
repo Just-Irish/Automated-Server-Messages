@@ -3,6 +3,9 @@
     - Colored Messages
     - Changing Font Size of Messages (if it is possible)
     - GUI (if I have the time and capabilities)
+    
+#### Version 1.2.2 --> 1.2.3
+    - Added orange-colored text to the server message for easier visibility. Appears exactly the same as if an admin were to type "/announce <message>" in the server's console.
 
 #### Version 1.2.1 --> 1.2.2
     - Changed `/automsg` command to `/servermsg` instead. There appears to be an odd legacy piece of code I can't find that interferes with `/automsg` and potentially causing the server messages to not appear or save after restarts.

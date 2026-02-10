@@ -200,7 +200,7 @@ namespace AutomatedMessageMod
                     {
                         if (allArgs.Count < 3)
                         {
-                            return TextCommandResult.Error("Usage: /automsg add HH:mm message text");
+                            return TextCommandResult.Error("Usage: /servermsg add HH:mm message text");
                         }
 
                         string time = allArgs[1];
@@ -239,7 +239,7 @@ namespace AutomatedMessageMod
                     {
                         if (allArgs.Count < 2 || !int.TryParse(allArgs[1], out int index))
                         {
-                            return TextCommandResult.Error("Usage: /automsg remove <index>");
+                            return TextCommandResult.Error("Usage: /servermsg remove <index>");
                         }
 
                         if (index >= 1 && index <= messages.Count)
@@ -271,11 +271,12 @@ namespace AutomatedMessageMod
                 if (!msg.SentToday && msg.Time <= now)
                 {
                     // Broadcast to all players using the server's player manager
+                    string formattedMessage = $"<strong><font color=\"orange\">{msg.Message}</font></strong>";
                     foreach (var player in sapi.World.AllOnlinePlayers)
                     {
                         if (player is IServerPlayer serverPlayer)
                         {
-                            serverPlayer.SendMessage(0, msg.Message, EnumChatType.Notification);
+                            serverPlayer.SendMessage(0, formattedMessage, EnumChatType.Notification);
                         }
                     }
                     msg.SentToday = true;
