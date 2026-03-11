@@ -12,12 +12,16 @@ Of course, this can be used for other things as well. Perhaps you run a public s
 **Do Keep In mind** this mod uses the time of the hosts machine. So if you are renting a server you will need to figure out its time zone and base your messages off of that.
 **ALSO**, this is strictly a mod for server-wide messages. Nothing more. It will not create automated tasks for the server. You need to do that manually or use your hosts provided cpanel.
 
-## Commands (Version 1.2.2+)
+## Commands
+### Version 1.3.1
+* `/servermsg clear`
+
+### Version 1.2.2+
 * `/servermsg add [HH:mm] [Type your message here with up to 27 words!]`
 * `/servermsg remove [index]`
 * `/servermsg list`
 
-### Legacy Commands, (Version 1.2.1)
+### Obsolete Commands, (Version 1.2.1)
 * `/automsg add [HH:mm] [Type your message here with up to 27 words!]`
 * `/automsg remove [index]`
 * `/automsg list`
@@ -29,6 +33,7 @@ Of course, this can be used for other things as well. Perhaps you run a public s
 4. `remove` specifically deletes a single automated message. You need the rest of the command for it to work.
 5. `[index]` references the message you wish to delete in the order that it was created.
 6. `list` will show every single message you have created in the order that they were created.
+7. `clear` will delete all currently existing messages. An alternative to the `remove` command which deletes individual messages.
 
 #### Examples of the Commands Being Used
 * `/servermsg add 05:00 Server restart in 30 minutes.`

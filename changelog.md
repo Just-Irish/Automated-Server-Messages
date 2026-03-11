@@ -4,6 +4,10 @@
     - Changing Font Size of Messages (if it is possible)
     - GUI (if I have the time and capabilities)
 
+#### Version 1.3.0 --> 1.3.1
+    - Added command: clear
+      - Clears all created messages at once.
+
 #### Version 1.2.2 --> 1.3.0
     - Added orange-colored text to the server message for easier visibility. Appears exactly the same as if an admin were to type "/announce <message>" in the server's console.
 
