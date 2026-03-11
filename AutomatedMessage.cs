@@ -189,7 +189,7 @@ namespace AutomatedMessageMod
             
             if (allArgs.Count == 0)
             {
-                return TextCommandResult.Error("Available subcommands: add, list, remove");
+                return TextCommandResult.Error("Available subcommands: add, list, remove, clear");
             }
 
             string subcommand = allArgs[0].ToLower();
@@ -254,9 +254,21 @@ namespace AutomatedMessageMod
                             return TextCommandResult.Error($"Index out of range: {index}. Valid range: 1-{messages.Count}");
                         }
                     }
+                case "clear":
+                    {
+                        if (messages.Count == 0)
+                        {
+                            return TextCommandResult.Success("No scheduled messages to clear.");
+                        }
+
+                        int count = messages.Count;
+                        messages.Clear();
+                        SaveMessages();
+                        return TextCommandResult.Success($"Cleared {count} scheduled message{(count == 1 ? "" : "s")}.");
+                    }
 
                 default:
-                    return TextCommandResult.Error("Available subcommands: add, list, remove");
+                    return TextCommandResult.Error("Available subcommands: add, list, remove, clear");
             }
         }
 
